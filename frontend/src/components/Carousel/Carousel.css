@@ -1,18 +1,12 @@
-.custom_carousel {
-    border: 1px solid;
-    /* width:70%; */
-    /* height: 500px; */
-    /* align-items: center; */
-    margin: auto;
-}
 
-.carousel_image {
-    width: 50%;
+.custom_carousel, .carousel-inner,
+.carousel-item{
+height: 100%;  
+
+}
+.carousel-item img{
+    height: 70%;
+    width: 80%;
+    object-position: center;
     object-fit: cover;
-}
-
-.carousel-caption {
-    color: rgb(26, 55, 61);
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgb(7, 248, 232);
 }
