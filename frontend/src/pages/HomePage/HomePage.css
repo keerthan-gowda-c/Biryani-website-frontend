@@ -1,6 +1,6 @@
 .home_carousel {
-    object-fit: fill;
-    height: 600px;
+    object-fit: cover;
+    height:622px;
     border: 1px solid;
 
 }
