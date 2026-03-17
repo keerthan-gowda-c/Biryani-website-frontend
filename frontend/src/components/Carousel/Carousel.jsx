@@ -13,7 +13,7 @@ const Carousel = ({ images }) => {
                     {
                         images.map((img_object, index) => (
                             <div key={index} className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
-                                <img src={img_object.img_src} className="d-block  carousel_image" width={'200px'} data-bs-interval='100' alt="" />
+                                <img src={img_object.img_src} className="d-block  carousel_image"  data-bs-interval='100' alt="" />
                                 <div className='carousel-caption d-none d-md-block ' >
                                     <h5 className='text-center '>{img_object.img_title}</h5>
                                     <p className='text-center'>{img_object.img_description}</p>
