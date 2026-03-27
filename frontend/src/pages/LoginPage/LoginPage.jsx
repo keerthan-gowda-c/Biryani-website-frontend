@@ -5,7 +5,7 @@ export default function LoginPage() {
     <>
       <form action="">
 
-        <section className="form-section">
+        <section className="login-section">
 
           <div>
             <label htmlFor="">Name : </label>
