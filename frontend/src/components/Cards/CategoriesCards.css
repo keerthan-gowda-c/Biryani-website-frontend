@@ -3,6 +3,8 @@
     width: 300px;
     overflow: hidden;
     /* top: 50%; */
+    
+    transition: 200ms;
     .category-img {
         width: 100%;
         object-position: center;
@@ -10,9 +12,24 @@
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
     }
+
+    .card-text{
+        background-color: antiquewhite;
+        font-family:'Courier New', Courier, monospace;
+        font-weight: 700;
+    }
+    
+}
+.categ:hover{
+    transform: translateY(-10px);
+    transition: 400ms;
+    box-shadow: 0px 0px 40px 1px rgb(255, 184, 42);
+    /* width: 350px;
+    height: 230px; */
+    padding: 20px;
 }
 
-.category-card:hover {
+/* .category-card:hover {
     transition: 400ms;
     box-shadow: 3px 3px 10px 5px rgb(124, 115, 128);
-}
+} */

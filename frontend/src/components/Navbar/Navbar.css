@@ -1,15 +1,17 @@
 .navbar{
     background-color: rgb(255, 198, 129);
+
 }
 
 .nav-item{
     font-size: 20px;
     margin: auto;
-    transform: translate(100px,-5px);
-    /* transform: translateX(); */
-    /* align-items:flex-end; */
+   
     
 }
+
+
+
 .authentication{
     display: flex;
     width: 300px;
