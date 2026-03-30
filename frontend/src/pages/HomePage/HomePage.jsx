@@ -23,7 +23,7 @@ export default function HomePage() {
             </div> */}
             <div className='category-section' id='category'>
                 <div className='category-heading'>
-                    <h1 className='text-center'>
+                    <h1 className='text-center pt-sans-regular playwrite-ie'>
                         Categories
                     </h1>
                 </div>

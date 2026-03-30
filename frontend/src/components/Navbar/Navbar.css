@@ -1,5 +1,6 @@
 .navbar{
     background-color: rgb(255, 198, 129);
+    height: 200px;
 
 }
 
@@ -9,9 +10,26 @@
    
     
 }
-
-
-
+.nav-item:hover{
+    text-decoration: underline;
+}
+.collapse{
+    /* align-items: center; */
+    /* width: 60%; */
+    /* border: 1px solid; */
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.logo{
+    /* border: 1px solid; */
+    align-items: center;
+    position: absolute;
+    left:40%;
+    top: 10%;
+}
 .authentication{
     display: flex;
     width: 300px;

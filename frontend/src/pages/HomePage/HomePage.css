@@ -1,54 +1,77 @@
 .home_carousel {
     object-fit: cover;
-    height:622px;
-   
+    height: 622px;
+
 
 }
-.category-section{
+
+.category-section {
     position: absolute;
-    
-  
+
+
     /* top: 90%; */
     padding: 50px;
-    h1{
-    text-shadow: 2px 2px 5px bisque;
-     background-color: blanchedalmond;
-    /* left: 50%; */
-    /* position: absolute; */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
+    h1 {
+        text-shadow: 2px 2px 5px bisque;
+        background-color: blanchedalmond;
+        /* left: 50%; */
+        /* position: absolute; */
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
-    .category-heading{
+
+    .category-heading {
         /* border: 1px solid; */
-        position:static;
-         transform: translateX(-12px);
-         left: 50%;
-         
+        position: static;
+        transform: translateX(-12px);
+        left: 50%;
+        /* font-family:Verdana, Geneva, Tahoma, sans-serif */
+
+
+        .pt-sans-regular {
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .playwrite-ie {
+            font-family: "Playwrite IE", cursive;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+
+
+
     }
 }
-.categories{
+
+.categories {
     top: 80%;
- /* left: 90%; */
- /* transform: translateX(10px); */
- /* margin: auto; */
+    /* left: 90%; */
+    /* transform: translateX(10px); */
+    /* margin: auto; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 1px solid rgb(253, 241, 0);
     padding: 12px;
-   
-    background-image: linear-gradient(to bottom, blanchedalmond,brown);
+
+    background-image: linear-gradient(to bottom, blanchedalmond, brown);
     justify-content: space-around;
-    
-    
+
+
 
 }
 
-#home-login{
+#home-login {
     border: 1px solid;
     position: absolute;
     top: 30%;
     left: 50%;
     color: aliceblue;
     background-color: black;
-    display: none;   
+    display: none;
 }
