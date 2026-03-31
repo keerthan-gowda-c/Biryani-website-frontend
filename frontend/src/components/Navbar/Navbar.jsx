@@ -7,7 +7,7 @@ export default function Navbar() {
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <div className="logo">
-                            <img src="images\icons\favicon.ico" width={'80px'} alt="" /> Gowdru Biriyani
+                            <img src="images\icons\favicon.ico" width={'60px'} alt="" /> Gowdru Biriyani
                         </div>
 
                     </a>
@@ -18,7 +18,7 @@ export default function Navbar() {
                     </button>
 
                     <div className="collapse navbar-collapse  align-right" id="navbarSupportedContent">
-                        <ul className="navbar-nav ">
+                        <ul className="navbar-nav">
                             <li className="nav-item d-flex ">
                                 <NavLink to='/' id="home-login-button" className='nav-link'>Home</NavLink>
                             </li>

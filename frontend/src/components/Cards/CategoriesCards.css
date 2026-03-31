@@ -3,6 +3,7 @@
     width: 300px;
     overflow: hidden;
     /* top: 50%; */
+    background-color: antiquewhite;
     
     transition: 200ms;
     .category-img {
