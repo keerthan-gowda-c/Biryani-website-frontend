@@ -5,6 +5,7 @@ import AboutPage from '../pages/AboutPage/AboutPage';
 import Contact from '../pages/Contact/Contact';
 import ProductPage from '../pages/ProductPage/ProductPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
+import LoginForm from '../components/Popups/LoginForm';
 
 
 const my_router = createBrowserRouter(
@@ -31,6 +32,10 @@ const my_router = createBrowserRouter(
                 {
                     path:'/Login',
                     element:<LoginPage/>
+                },
+                {
+                    path:'/Register',
+                    element:<LoginForm/>
                 }
             ]
         }

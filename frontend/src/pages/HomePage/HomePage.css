@@ -9,70 +9,192 @@
 
 
 }
+/* =========================
+   CATEGORY SECTION
+========================= */
 
 .category-section {
-    position: absolute;
-
-
-    /* top: 90%; */
-    padding: 50px;
-
-    h1 {
-        text-shadow: 2px 2px 5px bisque;
-        background-color: blanchedalmond;
-        /* left: 50%; */
-        /* position: absolute; */
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    .category-heading {
-        /* border: 1px solid; */
-        position: static;
-        transform: translateX(-12px);
-        left: 50%;
-        /* font-family:Verdana, Geneva, Tahoma, sans-serif */
-
-
-        .pt-sans-regular {
-            font-family: "PT Sans", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
-        .playwrite-ie {
-            font-family: "Playwrite IE", cursive;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-        }
-
-
-
-
-    }
+    position: relative;
+    padding: 70px 40px;
+    margin-top: -40px;
+    z-index: 5;
 }
 
+/* Heading Wrapper */
+.category-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Main Heading */
+.category-heading h1 {
+    display: inline-block;
+    padding: 14px 40px;
+
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #4b1e00;
+
+    background: linear-gradient(
+        to right,
+        #fff3d4,
+        #ffe0a3
+    );
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        inset 0 2px 5px rgba(255, 255, 255, 0.5);
+
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Fancy Fonts */
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+}
+
+.playwrite-ie {
+    font-family: "Playwrite IE", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+/* =========================
+   CATEGORY CONTAINER
+========================= */
+
 .categories {
-    top: 80%;
-    /* left: 90%; */
-    /* transform: translateX(10px); */
-    /* margin: auto; */
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 1px solid rgb(253, 241, 0);
-    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
 
-    background-image: linear-gradient(to bottom, blanchedalmond, brown);
-    justify-content: space-around;
+    padding: 35px;
 
+    border-radius: 28px;
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 248, 220, 0.95),
+            rgba(92, 46, 0, 0.95)
+        );
 
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2),
+        inset 0 2px 8px rgba(255, 255, 255, 0.25);
+
+    border: 1px solid rgba(255, 193, 7, 0.4);
+}
+
+/* =========================
+   CATEGORY CARD
+========================= */
+
+.category-card {
+    width: 220px;
+    padding: 20px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(14px);
+
+    text-align: center;
+
+    transition: all 0.35s ease;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.category-card:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 15px 25px rgba(0, 0, 0, 0.25);
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Category Image */
+.category-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 15px;
+
+    transition: transform 0.4s ease;
+}
+
+/* Image Zoom */
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Category Title */
+.category-card h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Category Subtitle */
+.category-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .category-section {
+        padding: 50px 20px;
+    }
+
+    .category-heading h1 {
+        font-size: 2rem;
+        padding: 12px 24px;
+    }
+
+    .categories {
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .category-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
 }
 
 #home-login {
-    border: 1px solid;
     position: absolute;
     top: 30%;
     left: 50%;

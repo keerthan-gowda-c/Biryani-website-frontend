@@ -15,7 +15,8 @@ const ProductCard = ({ product }) => {
     <p class="card-text"> {product.product_price}</p>
     <div className='buttons'>
     <a href="#" class="btn btn-warning">Add to Bag</a>
-    <a href="#" class="btn btn-success">Order Now</a>
+    {/* <a href="#" class="btn btn-success">Order Now</a> */}
+    <button id='order-btn' className='btn btn-success'>Order Now</button>
     </div>
   </div>
 </div>

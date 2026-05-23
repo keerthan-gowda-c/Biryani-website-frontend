@@ -3,3 +3,6 @@
     justify-content: space-around;
    
 }
+    .login-pop{
+        display: none;
+    }

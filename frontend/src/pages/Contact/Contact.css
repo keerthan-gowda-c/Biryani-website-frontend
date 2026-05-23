@@ -1,22 +1,142 @@
-.contact-section{
-    position: absolute;
-    align-items: center;
-    /* padding: 0; */
-left: 35%;
-    /* border: 1px solid; */
-    padding: 50px;
-    background-color: rgb(161, 191, 236);
-    /* width: ; */
-   /* color: blue; */
-   border-radius: 10px;
-   /* transform: translateX(500px); */
-   /* align-items: center; */
+/* =========================
+   CONTACT SECTION
+========================= */
 
+.contact-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
-    input{
-        /* border: 1px solid; */
-        width: 100%;
-        width: 300px;
-        box-shadow: 0px 0px 2px 1px rgb(193, 125, 43);
+/* =========================
+   HEADING
+========================= */
+
+.contact-heading {
+    font-size: 3rem;
+    font-weight: 800;
+
+    color: #f4d5c1;
+    text-shadow: 1px 2px 2px brown;
+
+    margin-bottom: 10px;
+}
+
+.contact-heading span {
+    color: #fff39c;
+
+    text-shadow:
+        1px 2px 10px rgb(19, 12, 8);
+}
+
+/* Subtitle */
+.contact-subtitle {
+    font-size: 1.05rem;
+    color: #ffffff;
+
+    padding: 10px;
+    background-color: #8e3a0395;
+    border-radius: 50px;
+    
+    
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.contact-section {
+    padding: 45px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 248, 238, 0.95),
+            rgba(255, 244, 220, 0.95)
+        );
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.contact-section .form-label {
+    font-weight: 600;
+    color: #4b1e00;
+
+    margin-bottom: 10px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.contact-section .form-control {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 14px 18px;
+
+    background: white;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.contact-section .form-control:focus {
+    box-shadow:
+        0 0 0 4px rgba(255, 193, 7, 0.25);
+
+    border-color: #ffc107;
+}
+
+/* Textarea */
+.contact-section textarea {
+    resize: none;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-section .btn {
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(255, 193, 7, 0.35);
+}
+
+/* Hover */
+.contact-section .btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(255, 193, 7, 0.45);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 25px;
     }
 }

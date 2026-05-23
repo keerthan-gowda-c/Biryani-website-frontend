@@ -1,0 +1,128 @@
+/* =========================
+   OVERLAY
+========================= */
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+#login-popup {
+    width: 100%;
+    max-width: 400px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    position: relative;
+
+    animation: popupShow 0.3s ease;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation */
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   TITLE
+========================= */
+
+#login-popup h1 {
+    color: #4b1e00;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+#login-popup .form-control {
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    background: #f8f8f8;
+
+    transition: all 0.3s ease;
+}
+
+/* Focus */
+#login-popup .form-control:focus {
+    box-shadow:
+        0 0 0 4px rgba(255, 193, 7, 0.3);
+
+    background: white;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: #777;
+
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #000;
+    transform: rotate(90deg);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#login-popup .btn {
+    padding: 12px;
+
+    transition: all 0.3s ease;
+}
+
+#login-popup .btn:hover {
+    transform: translateY(-2px);
+}

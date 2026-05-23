@@ -1,36 +1,148 @@
+/* =========================
+   CATEGORY CARD PREMIUM
+========================= */
+
 #category-card {
-    padding: 0;
     width: 300px;
+    padding: 0;
     overflow: hidden;
-    /* top: 50%; */
-    background-color: antiquewhite;
-    
-    transition: 200ms;
-    .category-img {
-        width: 100%;
-        object-position: center;
-        object-fit: contain;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-    }
 
-    .card-text{
-        background-color: antiquewhite;
-        font-family:'Courier New', Courier, monospace;
-        font-weight: 700;
-    }
-    
+    border: none;
+    border-radius: 24px;
+
+    background: #fff8ee;
+
+    position: relative;
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
 }
-.categ:hover{
-    transform: translateY(-10px);
-    transition: 400ms;
-    box-shadow: 0px 0px 40px 1px rgb(255, 184, 42);
-    /* width: 350px;
-    height: 230px; */
+
+/* Gradient Glow Border */
+#category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 24px;
+    padding: 1.5px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 193, 7, 0.7),
+        rgba(92, 46, 0, 0.7)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+#category-card:hover {
+    transform: translateY(-2px) scale(1.02);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.18),
+        0 0 30px rgba(255, 193, 7, 0.3);
+}
+
+/* Show Border Glow */
+#category-card:hover::before {
+    opacity: 1;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+#category-card .category-img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+/* =========================
+   CARD BODY
+========================= */
+
+#category-card .card-body {
     padding: 20px;
+    background: #fff8ee;
 }
 
-/* .category-card:hover {
-    transition: 400ms;
-    box-shadow: 3px 3px 10px 5px rgb(124, 115, 128);
-} */
+/* Title */
+#category-card .card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #4b1e00;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 0.5px;
+}
+
+/* Description */
+#category-card .card-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    color: #5f5f5f;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#category-card .btn {
+    margin-top: 15px;
+
+    border-radius: 50px;
+
+    padding: 10px 22px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+#category-card .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #category-card {
+        width: 100%;
+    }
+
+    #category-card .category-img {
+        height: 200px;
+    }
+
+    #category-card .card-title {
+        font-size: 1.2rem;
+    }
+}

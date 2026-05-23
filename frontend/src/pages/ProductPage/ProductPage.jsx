@@ -1,3 +1,4 @@
+import LoginForm from "../../components/Popups/LoginForm"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import products_data from "../../data/products_data/product_data"
 import './ProductPage.css'
@@ -12,7 +13,9 @@ export default function ProductPage(){
                     <ProductCard product={products}/>
                 ))
             }
-            
+            <div className="login-pop">
+                <LoginForm/>
+            </div>
         </div>
         </>
     )
