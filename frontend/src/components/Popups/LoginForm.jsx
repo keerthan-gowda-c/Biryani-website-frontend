@@ -11,7 +11,7 @@ export default function LoginForm() {
             <div className="text-center mt-5">
                 <button
                     id="order-btn"
-                    className="btn btn-warning px-4 py-2 rounded-pill fw-semibold"
+                    className="btn btn-warning px-4 py-2 rounded-pill fw-semibold order-button"
                     onClick={() => setShowPopup(true)}
                 >
                     Order Now

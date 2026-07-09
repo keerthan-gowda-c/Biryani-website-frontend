@@ -7,7 +7,7 @@ export default function Navbar() {
             className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"
             style={{ backgroundColor: "#5C2E00" }}
         >
-            <div className="container">
+            <div className="container w-50" >
                 
                 {/* Logo */}
                 <NavLink
@@ -39,10 +39,10 @@ export default function Navbar() {
 
                 {/* Navbar Links */}
                 <div
-                    className="collapse navbar-collapse justify-content-between"
+                    className="collapse navbar-collapse justify-content-between "
                     id="navbarSupportedContent"
                 >
-                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                    <ul className="navbar-nav mx-5 mb-2 mb-lg-0 gap-lg-3 text-center mx-auto">
 
                         <li className="nav-item">
                             <NavLink
@@ -79,23 +79,18 @@ export default function Navbar() {
                                 Contact
                             </NavLink>
                         </li>
+
+                        <li className="nav-item">
+                            <NavLink
+                                to="/Order"
+                                className="nav-link fw-semibold"
+                            >
+                                Cart
+                            </NavLink>
+                        </li>
                     </ul>
 
-                    {/* Login Button */}
-                    <div className="d-flex justify-content-center">
-                        <NavLink
-                            to="/Login"
-                            className="btn btn-warning fw-bold px-4 rounded-pill shadow-sm"
-                        >
-                            Login
-                        </NavLink>
-                        <NavLink
-                            to="/Register"
-                            className="btn btn-warning fw-bold px-4 rounded-pill shadow-sm"
-                        >
-                            Register
-                        </NavLink>
-                    </div>
+                    
                 </div>
             </div>
         </nav>

@@ -4,7 +4,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import AboutPage from '../pages/AboutPage/AboutPage';
 import Contact from '../pages/Contact/Contact';
 import ProductPage from '../pages/ProductPage/ProductPage';
-import LoginPage from '../pages/LoginPage/LoginPage';
+
 import LoginForm from '../components/Popups/LoginForm';
 
 
@@ -30,11 +30,7 @@ const my_router = createBrowserRouter(
                     element:<ProductPage/>
                 },
                 {
-                    path:'/Login',
-                    element:<LoginPage/>
-                },
-                {
-                    path:'/Register',
+                    path:'/Order',
                     element:<LoginForm/>
                 }
             ]
