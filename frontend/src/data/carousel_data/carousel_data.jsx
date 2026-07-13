@@ -1,32 +1,32 @@
 const carousel_data=[
 {
     id:1,
-    img_src:'images/product/biryani8.jpg',
-    img_title:'Special Paneer Biryani',
-    img_description:'Special Paneer Biryani — where every grain is rich, aromatic, and irresistibly flavorful.',
-    alt:'Special Paneer Biryani',
+    img_src:'images/product/Thalassery Biryani.png',
+    img_title:'Thalassery Biryani',
+    img_description:'Hailing from Kerala, this unique variety uses a short-grained, thin rice called Khyma instead of basmati.',
+    alt:'Thalassery Biryani',
 },
 {
     id:2,
-    img_src:'images/product/biryani7.jpg',
-    img_title:'Paneer Biryani',
-    img_description:'Fragrant layers of spice and soft paneer—biryani bliss in every bite.',
-    alt:'Paneer Biryani',
+    img_src:'images/product/Frankie.png',
+    img_title:'Frankie',
+    img_description:'Mumbai’s iconic street roll. Distinct from the Kathi roll, the wrap is a soft maida roti coated with egg.',
+    alt:'Frankie',
 },
 ,
 {
     id:3,
-    img_src:'images/product/biryani3.avif',
-    img_title:'Simple Biryani',
-    img_description:'A plate of biryani, because happiness comes layered.',
-    alt:'Simple Biryani',
+    img_src:'images/product/Galouti Kebab.png',
+    img_title:'Galouti Kebab',
+    img_description:'Created for an old Nawab of Lucknow who had lost his teeth, these minced meat patties are famous for their "melt-in-the-mouth" texture.',
+    alt:'Galouti Kebab',
 },
 {
     id:4,
-    img_src:'/images/product/biryani4.jpg',
-    img_title:'Chicken Biryani',
-    img_description:'A plate of chicken biryani that speaks the language of comfort and spice.',
-    alt:'Chicken Biryani',
+    img_src:'/images/product/Zafrani Paneer Biryani.jpeg',
+    img_title:'Zafrani Paneer Biryani',
+    img_description:'Highlighting a luxurious infusion of saffron (zafran) and nuts.',
+    alt:'Zafrani Paneer Biryani',
 }
 ]
 

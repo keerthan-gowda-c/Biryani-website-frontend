@@ -1,35 +1,35 @@
 const products_data=[
 {
     id:1,
-    thumbnail:'/images/product/biryani1.avif',
-    product_title:'Chicken Biryani',
-    product_description:'A plate of chicken biryani that speaks the language of comfort and spice.',
+    thumbnail:'/images/product/Achaari Paneer Tikka.jpeg',
+    product_title:'Achaari Paneer Tikka',
+    product_description:'Smoky, tandoor-grilled cottage cheese cubes.',
     product_price:'₹250.00'
 },
 {
     id:2,
-    thumbnail:'images/product/biryani2.avif',
-    product_title:'Dum Biryani',
+    thumbnail:'images/product/Kolkata Mutton Biryani.jpeg',
+    product_title:'Kolkata Mutton Biryani',
     product_description:'Sealed with spice, slow-cooked in love — dum biryani perfection.',
     product_price:'₹300.00'
 },
 {
     id:3,
-    thumbnail:'images/product/biryani3.avif',
-    product_title:'Simple Biryani',
+    thumbnail:'images/product/Lebanese Chicken Shawarma Wrap.jpeg',
+    product_title:'Lebanese Chicken Shawarma Wrap',
     product_description:'A plate of biryani, because happiness comes layered.',
     product_price:'₹200.00'
 },
 {
     id:4,
-    thumbnail:'images/product/paneerBiryani1.jpeg',
-    product_title:'Paneer Biryani',
+    thumbnail:'images/product/Shahi Tukda.jpeg',
+    product_title:'Shahi Tukda',
     product_description:'Fragrant layers of spice and soft paneer—biryani bliss in every bite.',
     product_price:'₹320.00'
 },
 {
     id:5,
-    thumbnail:'images/product/paneerBiryani2.jpeg',
+    thumbnail:'images/product/Special Paneer Biryani.jpeg',
     product_title:'Special Paneer Biryani',
     product_description:'Special Paneer Biryani — where every grain is rich, aromatic, and irresistibly flavorful.',
     product_price:'₹400.00'

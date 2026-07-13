@@ -2,7 +2,7 @@
 #carouselExampleCaptions {
     width: 100%;
     margin-top: 10px;
-    border-radius: 24px;
+    /* border-radius: 24px; */
     overflow: hidden;
     position: relative;
     box-shadow:
@@ -13,9 +13,9 @@
 /* Inner Container */
 #carouselExampleCaptions .carousel-inner {
     width: 100%;
-    aspect-ratio: 12/5;
+    aspect-ratio: 12/6;
     overflow: hidden;
-    border-radius: 24px;
+    /* border-radius: 24px; */
 }
 
 /* Carousel Item */
