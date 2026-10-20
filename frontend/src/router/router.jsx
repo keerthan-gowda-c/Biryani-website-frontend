@@ -35,7 +35,7 @@ const my_router = createBrowserRouter(
                 },
                 {
                     path:'/Checkout',
-                    element:<CheckoutPage/>
+                    element:<CheckOutPage/>
                 },
             ]
         }
