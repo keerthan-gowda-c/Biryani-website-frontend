@@ -4,8 +4,8 @@ import HomePage from '../pages/HomePage/HomePage';
 import AboutPage from '../pages/AboutPage/AboutPage';
 import Contact from '../pages/Contact/Contact';
 import ProductPage from '../pages/ProductPage/ProductPage';
-
-import LoginForm from '../components/Popups/LoginForm';
+import CartPage from '../pages/CartPage/CartPage';
+import CheckOutPage from '../pages/CheckoutPage/CheckoutPage';
 
 
 const my_router = createBrowserRouter(
@@ -30,9 +30,13 @@ const my_router = createBrowserRouter(
                     element:<ProductPage/>
                 },
                 {
-                    path:'/Order',
-                    element:<LoginForm/>
-                }
+                    path:'/Cart',
+                    element:<CartPage/>
+                },
+                {
+                    path:'/Checkout',
+                    element:<CheckOutPage/>
+                },
             ]
         }
     ]

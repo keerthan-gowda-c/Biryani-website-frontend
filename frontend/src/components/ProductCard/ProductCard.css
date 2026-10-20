@@ -4,31 +4,120 @@
     overflow: hidden;
     padding: 0;
     background: rgba(255, 255, 255, 0.1);
-    /* light transparent */
     backdrop-filter: blur(10px);
-    /* glass effect */
     -webkit-backdrop-filter: blur(10px);
-    /* for Safari */
     border-radius: 12px;
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
     color: #fff;
-
-
-
 
     img {
         object-position: center;
         object-fit: fill;
         height: 50%;
         border-radius: 5px;
-       
-    }
 
+    }
 }
 
 .buttons {
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-around;
 
+}
+
+.add-to-bag-btn {
+    background-color: #fff;
+    color: #000;
+    /* transition: 0.20s all; */
+}
+
+.add-to-bag-btn:hover {
+    background-color: #f0882d;
+    border: 1px solid rgb(184, 147, 48);
+}
+
+
+/* Added to Bag Popup */
+.cart-toast {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: min(360px, calc(100vw - 30px));
+    padding: 16px;
+    margin: 0;
+
+    background-color: #ffffff;
+    color: #29251f;
+    border: 1px solid #b8dfc5;
+    border-left: 5px solid #198754;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    animation: toast-slide-in 0.3s ease-out;
+}
+
+.toast-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 30px;
+    height: 30px;
+
+    color: #ffffff;
+    background-color: #198754;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cart-toast strong {
+    display: block;
+    color: #198754;
+    margin-bottom: 3px;
+}
+
+.cart-toast p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #666666;
+}
+
+.toast-close {
+    margin-left: auto;
+    align-self: flex-start;
+
+    border: none;
+    background: transparent;
+    color: #777777;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.toast-close:hover {
+    color: #222222;
+}
+
+@keyframes toast-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-toast {
+        top: 75px;
+        right: 15px;
+    }
 }

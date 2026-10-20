@@ -82,7 +82,7 @@ export default function Navbar() {
 
                         <li className="nav-item">
                             <NavLink
-                                to="/Order"
+                                to="/Cart"
                                 className="nav-link fw-semibold"
                             >
                                 Cart
