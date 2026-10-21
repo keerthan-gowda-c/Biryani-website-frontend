@@ -1,8 +1,45 @@
-.card-section{
-    padding: 50px;
-    justify-content: space-around;
-   
+/*product section*/
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
-    .login-pop{
-        display: none;
+
+@media (max-width:70rem){
+    .card-section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        padding: 1.25rem;
     }
+}
+
+/*tablet*/
+@media (max-width: 62rem) {
+    .card-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+}
+
+/*mobile*/
+@media (max-width: 36rem) {
+    .card-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+/*reduced motion*/
+@media (prefers-reduced-motion: reduce) {
+    .card-section {
+        scroll-behavior: auto;
+    }
+}

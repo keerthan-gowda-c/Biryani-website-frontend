@@ -1,96 +1,126 @@
+
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
+const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/About" },
+    { name: "Menu", path: "/Menu" },
+    { name: "Contact", path: "/Contact" },
+    { name: "Cart", path: "/Cart" },
+];
+
 export default function Navbar() {
+    const closeMenu = () => {
+        document.activeElement?.blur();
+
+        const offcanvas = document.getElementById("mobileNavbar");
+        const closeButton = offcanvas?.querySelector(".btn-close");
+
+        closeButton?.click();
+    };
+
     return (
-        <nav
-            className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"
-            style={{ backgroundColor: "#5C2E00" }}
-        >
-            <div className="container w-50" >
-                
-                {/* Logo */}
+        <nav className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top custom-navbar">
+            <div className="container-fluid px-3 px-lg-5">
+                {/*logo*/}
                 <NavLink
                     to="/"
                     className="navbar-brand d-flex align-items-center fw-bold fs-4"
                 >
                     <img
-                        src="images/icons/favicon.ico"
+                        src="/images/icons/favicon.ico"
                         width="55"
                         height="55"
                         alt="Gowdru Biriyani Logo"
-                        className="me-2 rounded-circle border border-2 border-light"
+                        className="me-2 rounded-circle border border-2 border-light navbar-logo"
                     />
-                    Gowdru Biriyani
+                    <span>Gowdru Biriyani</span>
                 </NavLink>
 
-                {/* Mobile Toggle */}
-                <button
-                    className="navbar-toggler border-0"
+                {/*desktop navigation*/}
+                <div className="desktop-navbar d-none d-lg-flex">
+                    <ul className="navbar-nav gap-lg-3 text-center">
+                        {navItems.map((item) => (
+                            <li className="nav-item" key={item.path}>
+                                <NavLink
+                                    to={item.path}
+                                    end={item.path === "/"}
+                                    className="nav-link fw-semibold"
+                                >
+                                    {item.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/*mobile menu button*/}
+                {/* <button
+                    className="navbar-toggler border-0 d-lg-none"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileNavbar"
+                    aria-controls="mobileNavbar"
+                    aria-label="Open navigation menu"
                 >
                     <span className="navbar-toggler-icon"></span>
-                </button>
+                </button> */}
 
-                {/* Navbar Links */}
+                <i className="bi bi-text-indent-right text-light navbar-toggler border-0" 
+               type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileNavbar"
+                    aria-controls="mobileNavbar"
+                    aria-label="Open navigation menu"
+                    ></i>
+
+                {/*mobile offcanvas*/}
                 <div
-                    className="collapse navbar-collapse justify-content-between "
-                    id="navbarSupportedContent"
+                    className="offcanvas offcanvas-end mobile-offcanvas d-lg-none"
+                    tabIndex="-1"
+                    id="mobileNavbar"
+                    aria-labelledby="mobileNavbarLabel"
                 >
-                    <ul className="navbar-nav mx-5 mb-2 mb-lg-0 gap-lg-3 text-center mx-auto">
+                    <div className="offcanvas-header">
+                        {/* <h5
+                            className="offcanvas-title fw-bold"
+                            id="mobileNavbarLabel"
+                        >
+                            Gowdru Biriyani
+                        </h5> */}
 
-                        <li className="nav-item">
-                            <NavLink
-                                to="/"
-                                className="nav-link fw-semibold"
-                            >
-                                Home
-                            </NavLink>
-                        </li>
+                        <img
+                        src="/images/icons/favicon.ico"
+                        width="55"
+                        height="55"
+                        alt="Gowdru Biriyani Logo"
+                        className="me-2 rounded-circle border border-2 border-light navbar-logo"
+                    />
+                        <button
+                            type="button"
+                            className="btn-close btn-close-white"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close menu"
+                        ></button>
+                    </div>
 
-                        <li className="nav-item">
-                            <NavLink
-                                to="/About"
-                                className="nav-link fw-semibold"
-                            >
-                                About
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink
-                                to="/Menu"
-                                className="nav-link fw-semibold"
-                            >
-                                Menu
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink
-                                to="/Contact"
-                                className="nav-link fw-semibold"
-                            >
-                                Contact
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink
-                                to="/Cart"
-                                className="nav-link fw-semibold"
-                            >
-                                Cart
-                            </NavLink>
-                        </li>
-                    </ul>
-
-                    
+                    <div className="offcanvas-body">
+                        <ul className="navbar-nav gap-2">
+                            {navItems.map((item) => (
+                                <li className="nav-item" key={item.path}>
+                                    <NavLink
+                                        to={item.path}
+                                        end={item.path === "/"}
+                                        className="nav-link fw-semibold"
+                                        onClick={closeMenu}
+                                    >
+                                        {item.name}
+                                    </NavLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

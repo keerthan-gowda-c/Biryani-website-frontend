@@ -1,204 +1,105 @@
-
-.home-page{
-    background-image: url('/images/background/Rustic chicken biryani spread.png');
+/*home page*/
+.home-page {
+    width: 100%;
+    background-image: url("/images/background/Rustic chicken biryani spread.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.home_carousel {
-    object-fit: cover;
-    height: 622px;
 
-
+/*home carousel*/
+.home-carousel {
+    width: 100%;
 }
-/* =========================
-   CATEGORY SECTION
-========================= */
 
+/*categories section*/
 .category-section {
     position: relative;
-    padding: 70px 40px;
-    margin-top: -40px;
     z-index: 5;
+    margin-top: -2.5rem;
+    padding: 4.375rem 2.5rem;
+
 }
 
-/* Heading Wrapper */
+/*category heading*/
 .category-heading {
+    margin-bottom: 2.1875rem;
     text-align: center;
-    margin-bottom: 35px;
+    color: rgb(87, 57, 11);
+    text-shadow: 0px 0px 10px rgb(255, 149, 69);
+    background-color: rgba(255, 228, 196, 0.486);
+    border-radius: 50px;
+    width: 50%;
+    margin-left: 25%;
 }
 
-/* Main Heading */
 .category-heading h1 {
     display: inline-block;
-    padding: 14px 40px;
 
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    color: #4b1e00;
-
-    background: linear-gradient(
-        to right,
-        #fff3d4,
-        #ffe0a3
-    );
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15),
-        inset 0 2px 5px rgba(255, 255, 255, 0.5);
-
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
 
-/* Fancy Fonts */
-.pt-sans-regular {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-}
-
-.playwrite-ie {
-    font-family: "Playwrite IE", cursive;
-    font-optical-sizing: auto;
-    font-weight: 600;
-}
-
-/* =========================
-   CATEGORY CONTAINER
-========================= */
-
+/*categories grid*/
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
-
-    padding: 35px;
-
-    border-radius: 28px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 248, 220, 0.95),
-            rgba(92, 46, 0, 0.95)
-        );
-
-    backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.2),
-        inset 0 2px 8px rgba(255, 255, 255, 0.25);
-
-    border: 1px solid rgba(255, 193, 7, 0.4);
-}
-
-/* =========================
-   CATEGORY CARD
-========================= */
-
-.category-card {
-    width: 220px;
-    padding: 20px;
-
-    border-radius: 24px;
-
-    background: rgba(255, 255, 255, 0.12);
-
-    backdrop-filter: blur(14px);
-
-    text-align: center;
-
-    transition: all 0.35s ease;
-
-    cursor: pointer;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    overflow: hidden;
-}
-
-/* Hover Effect */
-.category-card:hover {
-    transform: translateY(-10px) scale(1.03);
-
-    box-shadow:
-        0 15px 25px rgba(0, 0, 0, 0.25);
-
-    background: rgba(255, 255, 255, 0.18);
-}
-
-/* Category Image */
-.category-card img {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5625rem;
     width: 100%;
-    height: 180px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-
-    margin-bottom: 15px;
-
-    transition: transform 0.4s ease;
+    padding: 2.1875rem;
+    box-sizing: border-box;
+    border-radius: 1.75rem;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 248, 220, 0.95),
+        rgba(92, 46, 0, 0.95)
+    );
+    backdrop-filter: blur(0.625rem);
+    box-shadow:
+        0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.2),
+        inset 0 0.125rem 0.5rem rgba(255, 255, 255, 0.25);
+    border: 0.0625rem solid rgba(255, 193, 7, 0.4);
 }
 
-/* Image Zoom */
-.category-card:hover img {
-    transform: scale(1.08);
-}
-
-/* Category Title */
-.category-card h3 {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-/* Category Subtitle */
-.category-card p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
+/*tablet*/
+@media (max-width: 62rem) {
     .category-section {
-        padding: 50px 20px;
-    }
-
-    .category-heading h1 {
-        font-size: 2rem;
-        padding: 12px 24px;
+        padding: 3.75rem 1.875rem;
     }
 
     .categories {
-        padding: 20px;
-        gap: 18px;
-    }
-
-    .category-card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .category-card img {
-        height: 200px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        padding: 1.875rem;
     }
 }
 
-#home-login {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    color: aliceblue;
-    background-color: black;
-    display: none;
+/*mobile*/
+@media (max-width: 48rem) {
+    .category-section {
+        margin-top: -1.25rem;
+        padding: 3.125rem 1.25rem;
+    }
+
+    .category-heading {
+        margin-bottom: 1.875rem;
+    }
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.125rem;
+        padding: 1.25rem;
+        border-radius: 1.5rem;
+    }
+}
+
+/*small mobile*/
+@media (max-width: 30rem) {
+    .category-section {
+        padding: 2.5rem 0.9375rem;
+    }
+
+    .categories {
+        gap: 1rem;
+        padding: 0.875rem;
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,50 +1,55 @@
-
-/* Main Checkout Page */
+/*checkout page*/
 .checkout-page {
     min-height: 60vh;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
 }
 
-/* Heading */
+/*checkout heading*/
 .checkout-heading {
-    color: #29251f;
+    display: flex;
+    justify-content: space-around;
+    width: 57%;
+    margin-bottom: 1.875rem;
+    color: #fae8c3;
+    background-color: rgba(123, 81, 29, 0.634);
+    border-radius: 3.125rem;
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    text-shadow: 0.0625rem 0.125rem 0.625rem rgb(182, 112, 41);
 }
 
-/* Form and Summary Cards */
+/*checkout form and summary*/
 .checkout-card,
 .checkout-summary {
     height: 100%;
-    padding: 28px;
-    border: 1px solid #eee2dc;
-    border-radius: 14px;
+    padding: 1.75rem;
     background-color: #fff;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    border: 0.0625rem solid #eee2dc;
+    border-radius: 0.875rem;
+    box-shadow: 0 0.25rem 1.125rem rgba(0, 0, 0, 0.05);
 }
 
 .checkout-card h3,
 .checkout-summary h3 {
+    margin-bottom: 1.5rem;
+    color: #29251f;
     font-size: 1.3rem;
     font-weight: 700;
-    color: #29251f;
-    margin-bottom: 24px;
 }
 
-/* Form Labels */
+/*form labels*/
 .checkout-card .form-label {
-    font-weight: 600;
+    margin-bottom: 0.5rem;
     color: #403a35;
-    margin-bottom: 8px;
+    font-weight: 600;
 }
 
-/* Form Controls */
+/*form controls*/
 .checkout-card .form-control {
-    padding: 11px 13px;
-    border: 1px solid #ded5cf;
-    border-radius: 8px;
+    padding: 0.6875rem 0.8125rem;
+    border: 0.0625rem solid #ded5cf;
+    border-radius: 0.5rem;
     font-size: 0.95rem;
 }
 
@@ -53,15 +58,16 @@
     box-shadow: 0 0 0 0.2rem rgba(179, 66, 32, 0.15);
 }
 
-/* Place Order Button */
+/*place order button*/
 .place-order-btn {
     width: 100%;
-    padding: 13px;
-    border-radius: 8px;
+    padding: 0.8125rem;
+    color: #fff;
     background-color: #b34220;
-    border-color: #b34220;
-    font-weight: 700;
+    border: 0.0625rem solid #b34220;
+    border-radius: 0.5rem;
     font-size: 1rem;
+    font-weight: 700;
 }
 
 .place-order-btn:hover {
@@ -69,20 +75,20 @@
     border-color: #8f3017;
 }
 
-/* Summary Products */
+/*checkout products*/
 .checkout-product {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid #f0e8e3;
+    gap: 1rem;
+    padding: 0.875rem 0;
+    border-bottom: 0.0625rem solid #f0e8e3;
 }
 
 .checkout-product-name {
+    margin-bottom: 0.3125rem;
     color: #29251f;
     font-weight: 600;
-    margin-bottom: 5px;
 }
 
 .checkout-product span {
@@ -95,21 +101,21 @@
     white-space: nowrap;
 }
 
-/* Total */
+/*checkout total*/
 .checkout-total {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    color: #b34220;
     font-size: 1.15rem;
     font-weight: 700;
-    color: #b34220;
-    margin-top: 8px;
 }
 
-/* Back to Cart */
+/*edit cart link*/
 .edit-cart-link {
     display: inline-block;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     color: #b34220;
     text-align: center;
     text-decoration: none;
@@ -121,79 +127,83 @@
     text-decoration: underline;
 }
 
-/* Empty Cart */
+/*empty cart and success*/
 .checkout-empty,
 .checkout-success {
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 55px 25px;
-    text-align: center;
+    max-width: 40.625rem;
+    margin: 1.875rem auto;
+    padding: 3.4375rem 1.5625rem;
     background-color: #fffaf7;
-    border-radius: 16px;
+    border-radius: 1rem;
+    text-align: center;
 }
 
 .checkout-empty h2,
 .checkout-success h2 {
-    font-weight: 700;
+    margin-bottom: 0.9375rem;
     color: #29251f;
-    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .checkout-empty p,
 .checkout-success p {
+    margin-bottom: 1.375rem;
     color: #77716b;
-    margin-bottom: 22px;
 }
 
 .checkout-empty .btn,
 .checkout-success .btn {
-    padding: 11px 25px;
+    padding: 0.6875rem 1.5625rem;
+    color: #fff;
     background-color: #b34220;
-    border-color: #b34220;
-    border-radius: 8px;
+    border: 0.0625rem solid #b34220;
+    border-radius: 0.5rem;
     font-weight: 600;
 }
 
-/* Success State */
+/*success icon*/
 .success-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 22px;
-    border-radius: 50%;
-    background-color: #e4f5e8;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    margin: 0 auto 1.375rem;
     color: #238342;
+    background-color: #e4f5e8;
+    border-radius: 50%;
     font-size: 2rem;
     font-weight: 700;
 }
 
+/*success message*/
 .checkout-success .success-message {
     font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
+/*tablet*/
+@media (max-width: 62rem) {
     .checkout-summary {
         height: auto;
     }
 }
 
-@media (max-width: 576px) {
+/*mobile*/
+@media (max-width: 36rem) {
     .checkout-page {
-        padding-top: 25px;
-        padding-bottom: 35px;
+        padding-top: 1.5625rem;
+        padding-bottom: 2.1875rem;
     }
 
     .checkout-heading {
+        width: 100%;
+        margin-bottom: 1.375rem;
         font-size: 1.6rem;
-        margin-bottom: 22px;
     }
 
     .checkout-card,
     .checkout-summary {
-        padding: 20px;
+        padding: 1.25rem;
     }
 
     .checkout-card h3,

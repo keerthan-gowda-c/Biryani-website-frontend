@@ -13,10 +13,9 @@ const carousel_data=[
     img_description:'Mumbai’s iconic street roll. Distinct from the Kathi roll, the wrap is a soft maida roti coated with egg.',
     alt:'Frankie',
 },
-,
 {
     id:3,
-    img_src:'images/product/Galouti Kebab.png',
+    img_src:'images/product/Galouti_Kebab.png',
     img_title:'Galouti Kebab',
     img_description:'Created for an old Nawab of Lucknow who had lost his teeth, these minced meat patties are famous for their "melt-in-the-mouth" texture.',
     alt:'Galouti Kebab',

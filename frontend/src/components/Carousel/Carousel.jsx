@@ -1,42 +1,92 @@
-import './Carousel.css'
+import { useEffect, useState } from "react";
+import "./Carousel.css";
 
 const Carousel = ({ images }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+        if (images.length <= 1) return;
+
+        const interval = setInterval(() => {
+            setActiveIndex((current) => (current + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    if (!images.length) return null;
+
+    const previousSlide = () => {
+        setActiveIndex((current) =>
+            (current - 1 + images.length) % images.length
+        );
+    };
+
+    const nextSlide = () => {
+        setActiveIndex((current) =>
+            (current + 1) % images.length
+        );
+    };
+
     return (
-        <>
-            <div id="carouselExampleCaptions" className="carousel slide custom_carousel " data-bs-ride='carousel'>
-                {/* <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div> */}
-                <div className="carousel-inner">
-                    {
-                        images.map((img_object, index) => (
-                            <div key={index} className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
-                                <img src={img_object.img_src} className="d-block  carousel_image"  data-bs-interval='500' alt="" />
-                                <div className='carousel-caption d-none d-md-block ' >
-                                    <h5 className='text-center '>{img_object.img_title}</h5>
-                                    <p className='text-center'>{img_object.img_description}</p>
-                                </div>
+        <div className="custom-carousel">
 
-                            </div>
-                        )
-                        )
-                    }
+
+            {images[activeIndex].img_title && (
+                <div className="carousel-track">
+                    <img
+                        src={images[activeIndex].img_src}
+                        className="carousel-image"
+                        alt={images[activeIndex].img_title || "Carousel image"}
+                    />
+                    <div className="carousel-caption">
+                        <h5>{images[activeIndex].img_title}</h5>
+                        <p>{images[activeIndex].img_description}</p>
+                    </div>
                 </div>
+            )}
 
 
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
-        </>
-    )
-}
+            {images.length > 1 && (
+                <>
+                    <button
+                        className="carousel-control carousel-prev"
+                        onClick={previousSlide}
+                        aria-label="Previous slide"
+                        type="button"
+                    >
+                        &#10094;
+                    </button>
+
+                    <button
+                        className="carousel-control carousel-next"
+                        onClick={nextSlide}
+                        aria-label="Next slide"
+                        type="button"
+                    >
+                        &#10095;
+                    </button>
+
+                    <div className="carousel-indicators">
+                        {images.map((image, index) => (
+                            <button
+                                key={image.img_src || index}
+                                className={
+                                    index === activeIndex
+                                        ? "carousel-indicator active"
+                                        : "carousel-indicator"
+                                }
+                                onClick={() => setActiveIndex(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                                aria-current={index === activeIndex}
+                                type="button"
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
+        </div>
+    );
+};
 
 export default Carousel;

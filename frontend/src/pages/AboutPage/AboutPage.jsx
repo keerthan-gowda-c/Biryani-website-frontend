@@ -13,7 +13,7 @@ export default function AboutPage() {
             </div>
 
             {/* Content */}
-            <div className="about-container row align-items-center g-5">
+            <div className="about-container row align-items-center g-4">
 
                 {/* Image */}
                 <div className="col-lg-6 text-center">

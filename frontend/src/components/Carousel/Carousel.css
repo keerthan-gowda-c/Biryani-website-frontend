@@ -1,153 +1,195 @@
-/* Main Carousel */
-#carouselExampleCaptions {
-    width: 100%;
-    margin-top: 10px;
-    /* border-radius: 24px; */
-    overflow: hidden;
+/*carousel container*/
+.custom-carousel {
     position: relative;
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25),
-        0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Inner Container */
-#carouselExampleCaptions .carousel-inner {
     width: 100%;
-    aspect-ratio: 12/6;
     overflow: hidden;
-    /* border-radius: 24px; */
 }
 
-/* Carousel Item */
-#carouselExampleCaptions .carousel-item {
-    width: 100%;
-    height: 100%;
+/*carousel image*/
+.carousel-track {
     position: relative;
+    width: 100%;
 }
 
-/* Image */
-#carouselExampleCaptions .carousel-item img {
+.carousel-image {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 38rem;
     object-fit: cover;
     object-position: center;
-
-    /* Smooth zoom effect */
-    transform: scale(1);
-    transition: transform 6s ease;
-    filter: brightness(75%);
 }
 
-/* Zoom animation on active slide */
-#carouselExampleCaptions .carousel-item.active img {
-    transform: scale(1.08);
-}
-
-/* Premium Dark Overlay */
-#carouselExampleCaptions .carousel-item::after {
-    content: "";
+/*carousel caption*/
+.carousel-caption {
     position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-/* Caption */
-#carouselExampleCaptions .carousel-caption {
-    bottom: 18%;
-    left: 8%;
-    right: auto;
-    text-align: left;
-    z-index: 2;
-    max-width: 600px;
-}
-
-/* Heading */
-#carouselExampleCaptions .carousel-caption h5 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    right: 10%;
+    bottom: 3rem;
+    left: 10%;
+    padding: 1.25rem;
     color: #fff;
-    margin-bottom: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 0.75rem;
 }
 
-/* Description */
-#carouselExampleCaptions .carousel-caption p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #f1f1f1;
+.carousel-caption h5 {
+    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
-/* Premium Controls */
-#carouselExampleCaptions .carousel-control-prev,
-#carouselExampleCaptions .carousel-control-next {
-    width: 8%;
-    z-index: 10;
+.carousel-caption p {
+    margin: 0;
+    font-size: 1rem;
 }
 
-/* Glassmorphism Buttons */
-#carouselExampleCaptions .carousel-control-prev-icon,
-#carouselExampleCaptions .carousel-control-next-icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-
-    background-color: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(8px);
-
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-#carouselExampleCaptions .carousel-control-prev-icon:hover,
-#carouselExampleCaptions .carousel-control-next-icon:hover {
-    transform: scale(1.1);
-    background-color: rgba(255, 193, 7, 0.8);
-}
-
-/* Indicators */
-#carouselExampleCaptions .carousel-indicators [data-bs-target] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+/*carousel controls*/
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    color: #fff;
+    font-size: 1.75rem;
+    background: rgba(0, 0, 0, 0.45);
     border: none;
-    margin: 0 6px;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s ease;
 }
 
-/* Active Indicator */
-#carouselExampleCaptions .carousel-indicators .active {
-    background-color: #ffc107;
-    transform: scale(1.3);
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.75);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+.carousel-prev {
+    left: 1.25rem;
+}
 
-    #carouselExampleCaptions .carousel-inner {
-        aspect-ratio: 4/5;
+.carousel-next {
+    right: 1.25rem;
+}
+
+/*carousel indicators*/
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+    transform: translateX(-50%);
+}
+
+.carousel-indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.55);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background: #fff;
+}
+
+/*tablet*/
+@media (max-width: 62rem) {
+    .carousel-image {
+        height: 30rem;
     }
 
-    #carouselExampleCaptions .carousel-caption {
-        left: 5%;
-        right: 5%;
-        bottom: 12%;
-        text-align: center;
+    .carousel-caption {
+        bottom: 2.5rem;
+        padding: 1rem;
     }
 
-    #carouselExampleCaptions .carousel-caption h5 {
-        font-size: 2rem;
+    .carousel-caption h5 {
+        font-size: 1.5rem;
     }
 
-    #carouselExampleCaptions .carousel-caption p {
-        font-size: 0.95rem;
+    .carousel-control {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}
+
+/*mobile*/
+@media (max-width: 48rem) {
+    .carousel-image {
+        height: 22rem;
     }
 
-    #carouselExampleCaptions .carousel-control-prev-icon,
-    #carouselExampleCaptions .carousel-control-next-icon {
-        width: 42px;
-        height: 42px;
+    .carousel-caption {
+        right: 12%;
+        bottom: 2.5rem;
+        left: 12%;
+        padding: 0.75rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem;
+    }
+
+    .carousel-control {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.25rem;
+    }
+
+    .carousel-prev {
+        left: 0.5rem;
+    }
+
+    .carousel-next {
+        right: 0.5rem;
+    }
+}
+
+/*small mobile*/
+@media (max-width: 30rem) {
+    .carousel-image {
+        height: 16rem;
+    }
+
+    .carousel-caption {
+        bottom: 2rem;
+        padding: 0.625rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.75rem;
+    }
+
+    .carousel-indicators {
+        bottom: 0.5rem;
+    }
+
+    .carousel-indicator {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
+/*reduced motion*/
+@media (prefers-reduced-motion: reduce) {
+    .carousel-control {
+        transition: none;
     }
 }
